@@ -1,10 +1,13 @@
 .container_card{
+  background-color:rgba(68, 100, 159, 0.196);
+  padding-bottom: 80px;
+}
+.container_card{
   margin:10px;
   position: relative;
   height: 300px;
   width: 250px;
   border-radius: 10px 0 10px 10px;
-  background-color:rgba(68, 100, 159, 0.196);
   margin-bottom: 90px;
 }
 .button_close{
@@ -20,7 +23,6 @@
   box-shadow: -1px 1px 9px 1px rgba(0,0,0,0.75);
 }
 .button_close:hover{
-  padding:5px 10px;
   font-size: 1rem;
   border-radius: 10px;
   background-color: rgba(255, 0, 0, 0.115);
@@ -34,8 +36,8 @@
 }
 .title{
   position: absolute;
-  bottom: -15%;
   color: rgb(170, 194, 183);
+  left:20px;
 }
 .type{
   padding:5px 10px;
@@ -45,8 +47,8 @@
 }
 .type_container{
   position:absolute;
-  bottom: -25%;
-  left:0;
+  bottom: 3%;
+  left:20px;
 }
 .confirm{
   display:flex;

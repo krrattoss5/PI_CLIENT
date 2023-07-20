@@ -9,7 +9,7 @@ export default function Card(pokemon) {
   const [ confirm, setConfirm ] = useState(false);
   const {onClose} = pokemon
   return (
-    <div>
+    <div className={style.container_out}>
       {
         !pokemon.id?<NotFound />:<div className={style.container_card}>
           <button onClick={()=>setConfirm(true)} className={style.button_close}>x</button>

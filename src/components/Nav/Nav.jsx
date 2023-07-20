@@ -3,6 +3,7 @@ import SearchBar from '../search/SearchBar'
 import style from './Nav.module.css'
 import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
 import { useDispatch,useSelector } from 'react-redux'
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function Nav({onSearch,navHome}) {
   const dispatch = useDispatch()
@@ -64,6 +65,7 @@ export default function Nav({onSearch,navHome}) {
       </select>:null}
       {!homeNav?<button onClick={()=>navHome(true)} className={style.button_nav}>CREATE</button>:null}
       {homeNav?<button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button>:null}
+      <HomeIcon />
       {!homeNav?<SearchBar onSearch={onSearch}/>:null}
     </div>
   )
