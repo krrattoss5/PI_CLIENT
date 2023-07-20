@@ -20,7 +20,7 @@ export default function Card(pokemon) {
               <button className={style.si} onClick={()=>onClose(pokemon.id)}>Si</button>
             </div>
           </div>}
-          <Link to={`detail/${pokemon.id}`}>
+          <Link onClick={()=>pokemon.navHome(true)} to={`detail/${pokemon.id}`}>
             <img src={pokemon.img} alt={pokemon.name} className={style.img_card}/>
             <h2 className={style.title}>{pokemon.name}</h2>
           </Link>

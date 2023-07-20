@@ -1,6 +1,9 @@
 .container_form{
   width: 20%;
   margin-right: 50px;
+  min-width: 250px;
+  flex-grow: 1;
+  flex-basis: 20%;
 }
 .search_bar{
   width: 50%;
@@ -37,4 +40,10 @@
   font-size: 0.7rem;
   background-color: chocolate;
   box-shadow: 1px 3px 5px chocolate;
+}
+@media (max-width: 750px) {
+  .container_form{
+    margin-right: 0;
+  }
+  /* … */
 }
