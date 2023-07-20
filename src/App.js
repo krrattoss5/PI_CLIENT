@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div className="App">
-        {location.pathname !== '/home'?null:<Nav onSearch={onSearch} navHome={navHome}/>}
+        <Nav onSearch={onSearch} navHome={navHome}/>
       <Routes>
         <Route path='/' element={<Landing/>}/>
         <Route path='/home' element={<Home onClose={onClose} navHome={navHome}/>}/>

@@ -6,6 +6,7 @@ import { addPokemon } from '../../redux/actions/actions'
 import PokeType from '../pokeType/PokeType'
 import Loading from '../loading/Loading'
 import style from './Detail.module.css'
+import MenuResponsive from '../menuResponsive/MenuResponsive'
 
 
 export default function Detail() {
@@ -67,6 +68,7 @@ export default function Detail() {
           </>
         }
       </div>
+      <MenuResponsive />
     </div>
   )
 }

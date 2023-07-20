@@ -1,18 +1,19 @@
 .container_nav{
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  margin:0 5px 20px 5px;
+  margin:0 5px 0px 5px;
   border-radius: 5px;
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: #222;
-  -webkit-box-shadow: 0px 10px 26px -13px rgba(109,2,203,1);
-  -moz-box-shadow: 0px 10px 26px -13px rgba(109,2,203,1);
-  box-shadow: 0px 10px 26px -13px rgba(109,2,203,1);
+  box-shadow: inset 0px -20px 20px -20px rgba(109,2,203,1);
 }
 
 .button_nav{
+  flex-grow: 1;
+  flex-basis: 80px;
   margin-right:50px;
   padding:9px;
   border:none;
@@ -27,5 +28,11 @@
 }
 .button_nav:hover{
   box-shadow: -4px -4px 15px 0px rgba(109,2,203,1),
-              4px 4px 15px chocolate;
+  4px 4px 15px chocolate;
+}
+@media (max-width: 750px) {
+  .button_nav{
+    display: none;
+  }
+  /* … */
 }
