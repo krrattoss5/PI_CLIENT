@@ -1,14 +1,16 @@
-.container_card{
-  background-color:rgba(68, 100, 159, 0.196);
-  padding-bottom: 80px;
+.container_out{
+  margin-bottom: -60px;
+  padding: 0;
 }
 .container_card{
-  margin:10px;
+  background-color:rgba(68, 100, 159, 0.196);
+  margin:0 10px;
   position: relative;
   height: 300px;
   width: 250px;
   border-radius: 10px 0 10px 10px;
   margin-bottom: 90px;
+  padding-bottom: 80px;
 }
 .button_close{
   position: absolute;
@@ -30,6 +32,7 @@
   cursor:pointer;
 }
 .img_card{
+  margin-top: -30px;
   width: 100%;
   height: 100%;
   border-radius: 10px 0 10px 10px;
@@ -37,6 +40,7 @@
 .title{
   position: absolute;
   color: rgb(170, 194, 183);
+  bottom: 12%;
   left:20px;
 }
 .type{

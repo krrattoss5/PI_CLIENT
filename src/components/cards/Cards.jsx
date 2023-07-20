@@ -14,7 +14,6 @@ export default function Cards(props) {
       <div className={style.cards_container} >
         {
           current.map((p)=>
-          <div key={p.hp+p.name+p.id}>
             <Card
               key={p.name+p.id+p.hp}
               id={p.id}
@@ -24,7 +23,6 @@ export default function Cards(props) {
               types={p.types}
               onClose={props.onClose}
             />
-          </div>
           )
         }
       </div>
