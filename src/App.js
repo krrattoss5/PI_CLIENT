@@ -51,10 +51,10 @@ function App() {
   function navHome(flag){
     dispatch(homeNav(flag))
   }
-
+  console.log()
   return (
     <div className="App">
-        <Nav onSearch={onSearch} navHome={navHome}/>
+        {location.pathname === "/"?null:<Nav onSearch={onSearch} navHome={navHome}/>}
       <Routes>
         <Route path='/' element={<Landing/>}/>
         <Route path='/home' element={<Home onClose={onClose} navHome={navHome}/>}/>
@@ -62,7 +62,6 @@ function App() {
         <Route path='/home/create' element={<Form />}/>
         <Route path='*' element={<NotFound />}/>
       </Routes>
-      <img src={pokeRandom.img[70]} alt='random-img' className='imgM' />
     </div>
   );
 }

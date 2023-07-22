@@ -2,14 +2,6 @@
   text-align: center;
   background-color: #222;
 }
-.imgM{
-    position: absolute;
-    right: 20px;
-    bottom:10px;
-    display: flex;
-    width: 70px;
-    height: 50px;
-}
 
 .App-logo {
   height: 40vmin;
@@ -23,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f5f6f7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
