@@ -3,6 +3,7 @@ import SearchBar from '../search/SearchBar'
 import style from './Nav.module.css'
 import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
 import { useDispatch,useSelector } from 'react-redux'
+import pokeRandom from '../../assets/pokeRandom'
 
 export default function Nav({onSearch,navHome}) {
   const dispatch = useDispatch()
@@ -25,6 +26,8 @@ export default function Nav({onSearch,navHome}) {
 
   return (
     <div className={style.container_nav}>
+      <a href="/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo} /></a>
+      <div className={style.container_nav2}>
       {!homeNav?<select className={style.button_nav} onChange={handleOrder} id='order'>
         <option type='default' disable='true'>ORDER</option>
         <option>Attack ▲</option>
@@ -64,6 +67,7 @@ export default function Nav({onSearch,navHome}) {
       {!homeNav?<button onClick={()=>navHome(true)} className={style.button_nav}>CREATE</button>:null}
       <a href="/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
       {!homeNav?<SearchBar onSearch={onSearch}/>:null}
+    </div>
     </div>
   )
 }
