@@ -72,6 +72,7 @@ import henry from './randomlanding/henry.png';
 import whoIsThatPokemon from './randomlanding/whoIsThatPokemon.png';
 import landingBackdround from './randomlanding/landingBackground.jpg'
 import notFound from './randomlanding/z404.gif'
+import logo from './randomlanding/z555.png'
 
 const imgs = [
   p1,
@@ -147,7 +148,8 @@ const imgs = [
   henry,
   whoIsThatPokemon,
   landingBackdround,
-  notFound
+  notFound,
+  logo
 ];
 
 const images = {
