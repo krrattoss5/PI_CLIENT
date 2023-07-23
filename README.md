@@ -10,7 +10,7 @@
 ## Landing
 
 <p align="center">
-  <img width="800" src="./readme/home.png" />
+  <img width="800" src="./readme/landing.gif" />
 </p>
 
 - Muestra un background minimalista invitando al cliente al usuario.
@@ -20,7 +20,7 @@
 ## Home
 
 <p align="center">
-  <img width="800" src="./readme/home.png" />
+  <img width="800" src="./readme/home.gif" />
 </p>
 
 - Muestra la lista completa de Pokemons en formato de tarjetas, cada una con su nombre, imagen e ícono representativo del tipo de Pokemon al que pertenece (agua, fuego, etc).
@@ -35,7 +35,7 @@
 ## Pokedex
 
 <p align="center">
-  <img width="800" src="./readme/pokedex.png" />
+  <img width="800" src="./readme/pokedex.gif" />
 </p>
 
 - Nos muestra toda la información de ese Pokemon (id, nombre, imagen, tipo/s, y estadísticas).
@@ -45,7 +45,7 @@
 
 ## Pokelab
 <p align="center">
-  <img width="800" src="./readme/pokelab.png" />
+  <img width="800" src="./readme/pokelab.gif" />
 </p>
 
 - Posee un formulario controlado donde ingresamos los datos necesarios para crear un nuevo Pokemon.
@@ -53,7 +53,7 @@
 - Además, vemos de cada campo su estado de válido / erróneo con un ícono representativo a su lado.
 - El nombre no puede ser repetido de un Pokemon ya existente (ya sea original o creado).
 <p align="center">
-  <img width="400" src="./readme/pokelab_display.png" />
+  <img width="400" src="./readme/pokelab_display.gif" />
 </p>
 
 - Para los puntos de vida, velocidad, ataque y defensa, se implementó un sistema de asignación de 250 puntos como máximo; mostrando los puntos remanentes. En caso de superar el maximo permito, no se permite crear el Pokemon.
@@ -61,7 +61,7 @@
 
 - El boton de `CREATE` sólo se habilita si todos los campos estan aprobados.
 <p align="center">
-  <img width="400" src="./readme/pokelab_buttons.png" />
+  <img width="400" src="./readme/pokelab_buttons.gif" />
 </p>
 
 - Al confirmar se realiza la operación en el servidor y nos muestra en pantalla la respuesta que nos envía el mismo (éxito o error).
