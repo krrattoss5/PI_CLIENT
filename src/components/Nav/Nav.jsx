@@ -2,10 +2,11 @@ import React from 'react'
 import SearchBar from '../search/SearchBar'
 import style from './Nav.module.css'
 import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
+import { homeNav as hNav } from '../../redux/actions/actions'
 import { useDispatch,useSelector } from 'react-redux'
 import pokeRandom from '../../assets/pokeRandom'
 
-export default function Nav({onSearch,navHome}) {
+export default function Nav({onSearch,navHom}) {
   const dispatch = useDispatch()
   const { homeNav } = useSelector(s=>s)
 
@@ -26,7 +27,7 @@ export default function Nav({onSearch,navHome}) {
 
   return (
     <div className={style.container_nav}>
-      <a href="/#/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo} /></a>
+      <a href="/#/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo}  onClick={()=>dispatch(hNav(false))}/></a>
       <div className={style.container_nav2}>
       {!homeNav?<select className={style.button_nav} onChange={handleOrder} id='order'>
         <option type='default' disable='true'>ORDER</option>
@@ -64,8 +65,8 @@ export default function Nav({onSearch,navHome}) {
         <option>From Api</option>
         <option>All</option>
       </select>:null}
-      {!homeNav?<button onClick={()=>navHome(true)} className={style.button_nav}>CREATE</button>:null}
-      <a href="/#/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
+      {!homeNav?<button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button>:null}
+      <a href="/#/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></a>
       {!homeNav?<SearchBar onSearch={onSearch}/>:null}
     </div>
     </div>

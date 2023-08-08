@@ -38,10 +38,10 @@ export default function MenuResponsive({navHom}) {
     }
     function handleNavHome(e){
       if(homeNav){
-        navHom(false)
+        dispatch(hNav(false))
         setInMenu(false)
       }else{
-        navHom(true)
+        dispatch(hNav(true))
         setInMenu(false)
     }
   }
@@ -55,8 +55,8 @@ export default function MenuResponsive({navHom}) {
         </div>
         {
             !inMenu?null:<div className={style.button_container}>
-            <Link to="/home"><button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>HOME</button></Link>
-            <button onClick={()=>handleNavHome()} className={style.button_nav}>CREATE</button>
+            <Link to="/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></Link>
+            <Link to="/home"><button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button></Link>
             <select className={style.button_nav} onChange={handleOrder} id='order'>
               <option type='default' disable='true'>ORDER</option>
               <option onClick={()=>setInMenu(false)}>Attack ▲</option>
