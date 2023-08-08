@@ -20,7 +20,7 @@ function App() {
   const { pokemons } = useSelector(s=>s)
 
   useEffect(()=>{
-    !pokemons[0] && axios.get('http://localhost:3001/pokemons')
+    !pokemons[0] && axios.get('https://pi-api-ja4i.onrender.com/pokemons')
     .then(({data})=>{
       let filtro1 = new Set(data)
       let filtro2 = Array.from(filtro1)
@@ -34,7 +34,7 @@ function App() {
 
   const onSearch = async (name)=>{
     try {
-      await axios(`http://localhost:3001/pokemon?name=${name}`)
+      await axios(`https://pi-api-ja4i.onrender.com/pokemon?name=${name}`)
         .then(({data})=>{
           dispatch(getPokemonByName(data))
         })

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.8a29fcf4.chunk.css",
-    "main.js": "/static/js/main.b3911c3e.chunk.js",
-    "main.js.map": "/static/js/main.b3911c3e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c89f6bd4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c89f6bd4.js.map",
-    "static/js/2.eb1b0975.chunk.js": "/static/js/2.eb1b0975.chunk.js",
-    "static/js/2.eb1b0975.chunk.js.map": "/static/js/2.eb1b0975.chunk.js.map",
-    "static/js/3.6d8401bf.chunk.js": "/static/js/3.6d8401bf.chunk.js",
-    "static/js/3.6d8401bf.chunk.js.map": "/static/js/3.6d8401bf.chunk.js.map",
+    "main.css": "/static/css/main.8197f287.chunk.css",
+    "main.js": "/static/js/main.f067de46.chunk.js",
+    "main.js.map": "/static/js/main.f067de46.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.977f5a44.js",
+    "runtime-main.js.map": "/static/js/runtime-main.977f5a44.js.map",
+    "static/js/2.ca241231.chunk.js": "/static/js/2.ca241231.chunk.js",
+    "static/js/2.ca241231.chunk.js.map": "/static/js/2.ca241231.chunk.js.map",
+    "static/js/3.568c14ad.chunk.js": "/static/js/3.568c14ad.chunk.js",
+    "static/js/3.568c14ad.chunk.js.map": "/static/js/3.568c14ad.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.8a29fcf4.chunk.css.map": "/static/css/main.8a29fcf4.chunk.css.map",
-    "static/js/2.eb1b0975.chunk.js.LICENSE.txt": "/static/js/2.eb1b0975.chunk.js.LICENSE.txt",
+    "static/css/main.8197f287.chunk.css.map": "/static/css/main.8197f287.chunk.css.map",
+    "static/js/2.ca241231.chunk.js.LICENSE.txt": "/static/js/2.ca241231.chunk.js.LICENSE.txt",
     "static/media/1.f5cff308.gif": "/static/media/1.f5cff308.gif",
     "static/media/10.f7bb869c.gif": "/static/media/10.f7bb869c.gif",
     "static/media/11.f5ff4e31.gif": "/static/media/11.f5ff4e31.gif",
@@ -85,12 +85,13 @@
     "static/media/henry.21e38a8c.png": "/static/media/henry.21e38a8c.png",
     "static/media/Landing.module.css": "/static/media/landingBackground.bde9d2b7.jpg",
     "static/media/whoIsThatPokemon.767288ae.png": "/static/media/whoIsThatPokemon.767288ae.png",
-    "static/media/z404.504af7ab.gif": "/static/media/z404.504af7ab.gif"
+    "static/media/z404.504af7ab.gif": "/static/media/z404.504af7ab.gif",
+    "static/media/z555.1bb76cfd.png": "/static/media/z555.1bb76cfd.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c89f6bd4.js",
-    "static/js/2.eb1b0975.chunk.js",
-    "static/css/main.8a29fcf4.chunk.css",
-    "static/js/main.b3911c3e.chunk.js"
+    "static/js/runtime-main.977f5a44.js",
+    "static/js/2.ca241231.chunk.js",
+    "static/css/main.8197f287.chunk.css",
+    "static/js/main.f067de46.chunk.js"
   ]
 }
