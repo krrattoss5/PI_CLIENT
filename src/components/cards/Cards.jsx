@@ -22,7 +22,7 @@ export default function Cards(props) {
               type={p.type}
               types={p.types}
               onClose={props.onClose}
-              navHome={props.navHome}
+              navHome={props.navHom}
             />
           )
         }
