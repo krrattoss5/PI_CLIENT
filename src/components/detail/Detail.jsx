@@ -26,7 +26,7 @@ export default function Detail() {
     <div className={style.detail_box}>
       <div className={style.container_detail}>
         {!pokemon.name||!pokemon.img||!pokemon.attack||!pokemon.hp||!pokemon.defense?<Loading />:
-          <>
+          <div className={style.fragment}>
             <img src={pokemon.img} alt={pokemon.name} className={style.image_detail}/>
               <h1>{pokemon.name}</h1>
               <span className={style.id_area}>Id:#{pokemon.id}</span>
@@ -65,10 +65,9 @@ export default function Detail() {
                 <PokeType type={pokemon.type||pokemon.types}/>
               </div>
             </div>
-          </>
+          </div>
         }
       </div>
-      
       <MenuResponsive />
     </div>
   )

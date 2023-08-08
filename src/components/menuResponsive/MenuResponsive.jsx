@@ -53,7 +53,7 @@ export default function MenuResponsive({navHome}) {
         </div>
         {
             !inMenu?null:<div className={style.button_container}>
-            <a href="/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
+            <a href="/#/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
             <button onClick={()=>handleNavHome()} className={style.button_nav}>CREATE</button>
             <select className={style.button_nav} onChange={handleOrder} id='order'>
               <option type='default' disable='true'>ORDER</option>
