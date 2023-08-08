@@ -13,7 +13,7 @@ export default function Landing() {
         <div className={style.text_area}>
           <p className={style.text}>Create, Discover &<br></br> Collect your</p>
           <span className={style.text_span}>Fantastic Pokemons!!</span>
-          <Link to='/home'>
+          <Link to='/home' className={style.Link}>
             <button className={style.button_home}>Home</button>
           </Link>
         </div>

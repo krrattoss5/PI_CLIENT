@@ -26,7 +26,7 @@ export default function Nav({onSearch,navHome}) {
 
   return (
     <div className={style.container_nav}>
-      <a href="/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo} /></a>
+      <a href="/#/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo} /></a>
       <div className={style.container_nav2}>
       {!homeNav?<select className={style.button_nav} onChange={handleOrder} id='order'>
         <option type='default' disable='true'>ORDER</option>
@@ -65,7 +65,7 @@ export default function Nav({onSearch,navHome}) {
         <option>All</option>
       </select>:null}
       {!homeNav?<button onClick={()=>navHome(true)} className={style.button_nav}>CREATE</button>:null}
-      <a href="/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
+      <a href="/#/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
       {!homeNav?<SearchBar onSearch={onSearch}/>:null}
     </div>
     </div>
