@@ -21,7 +21,7 @@ export const getPokemonByName = (pokemon)=>{ //se usa para la function onSearch
   }
 };
 export const getTypes = ()=>{ //con esta traigo todos los tipos para el formulario
-  const endPointType = 'https://pi-api-ja4i.onrender.com/types'
+  const endPointType = 'https://pi-api-s3xh.onrender.com/types'
   return async (dispatch)=>{
     await axios.get(endPointType)
     .then(({data})=>{
@@ -33,7 +33,7 @@ export const getTypes = ()=>{ //con esta traigo todos los tipos para el formular
   }
 };
 export const createPokemon = (pokemon)=>{ //esta la uso para crear los pokemons
-  const endPoint = 'https://pi-api-ja4i.onrender.com/pokemon/create'
+  const endPoint = 'https://pi-api-s3xh.onrender.com/pokemon/create'
   return async (dispatch)=>{
     await axios.post(endPoint,pokemon)
     .then(({data})=>{
@@ -46,7 +46,7 @@ export const createPokemon = (pokemon)=>{ //esta la uso para crear los pokemons
 };
 //mini extras
 export const remove = (id)=>{ //con este remuevo los pokemons de la db o del cache del back
-  const endPoint = `https://pi-api-ja4i.onrender.com/pokemon/${id}`
+  const endPoint = `https://pi-api-s3xh.onrender.com/pokemon/${id}`
   return async (dispatch)=>{
     await axios.delete(endPoint)
     .then(({data})=>{
