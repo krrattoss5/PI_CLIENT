@@ -4,8 +4,11 @@ import style from './Card.module.css'
 import { Link } from 'react-router-dom'
 import PokeType from '../pokeType/PokeType'
 import NotFound from '../notFound/NotFound'
+import { homeNav } from '../../redux/actions/actions'
+import { useDispatch } from 'react-redux'
 
 export default function Card(pokemon) {
+  const dispatch = useDispatch()
   const [ confirm, setConfirm ] = useState(false);
   const {onClose} = pokemon
   return (
@@ -20,7 +23,7 @@ export default function Card(pokemon) {
               <button className={style.si} onClick={()=>onClose(pokemon.id)}>Si</button>
             </div>
           </div>}
-          <Link onClick={()=>pokemon.navHome(true)} to={`detail/${pokemon.id}`}>
+          <Link onClick={()=>dispatch(homeNav(true))} to={`detail/${pokemon.id}`}>
             <img src={pokemon.img} alt={pokemon.name} className={style.img_card}/>
             <h2 className={style.title}>{pokemon.name}</h2>
           </Link>

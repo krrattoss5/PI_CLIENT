@@ -2,8 +2,10 @@ import style from './MenuResponsive.module.css'
 import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
 import { useDispatch,useSelector } from 'react-redux'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { homeNav as hNav } from '../../redux/actions/actions'
 
-export default function MenuResponsive({navHome}) {
+export default function MenuResponsive({navHom}) {
   const dispatch = useDispatch()
   const [inMenu,setInMenu] = useState(false)
   const { homeNav } = useSelector(s=>s)
@@ -36,10 +38,10 @@ export default function MenuResponsive({navHome}) {
     }
     function handleNavHome(e){
       if(homeNav){
-        navHome(false)
+        dispatch(hNav(false))
         setInMenu(false)
       }else{
-        navHome(true)
+        dispatch(hNav(true))
         setInMenu(false)
     }
   }
@@ -53,8 +55,8 @@ export default function MenuResponsive({navHome}) {
         </div>
         {
             !inMenu?null:<div className={style.button_container}>
-            <a href="/#/home"><button onClick={()=>navHome(false)} className={style.button_nav}>HOME</button></a>
-            <button onClick={()=>handleNavHome()} className={style.button_nav}>CREATE</button>
+            <Link to="/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></Link>
+            <Link to="/home"><button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button></Link>
             <select className={style.button_nav} onChange={handleOrder} id='order'>
               <option type='default' disable='true'>ORDER</option>
               <option onClick={()=>setInMenu(false)}>Attack ▲</option>

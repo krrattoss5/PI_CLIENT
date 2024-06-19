@@ -17,7 +17,7 @@ export default function Landing() {
             <button className={style.button_home}>Home</button>
           </Link>
         </div>
-        <div className={style.container_inside_2}>
+        <div className={style.container_inside_2} onClick={()=>window.location.reload()}>
           <div className={style.shadow}></div>
           <img src={pokeRandom.img[index]} alt='random-img' className={style.imgR} />
         </div>

@@ -17,7 +17,7 @@ function App() {
   //const navigate = useNavigate()
   const location = useLocation()
   const dispatch = useDispatch();
-  const { pokemons } = useSelector(s=>s)
+  const { pokemons,navHome } = useSelector(s=>s)
 
   useEffect(()=>{
     !pokemons[0] && axios.get('https://pi-api-s3xh.onrender.com/pokemons')
@@ -48,16 +48,16 @@ function App() {
     //window.location.reload();
   }
 
-  function navHome(flag){
+  function navHom(flag){
     dispatch(homeNav(flag))
   }
-  console.log()
+
   return (
     <div className="App">
-        {location.pathname === "/"?null:<Nav onSearch={onSearch} navHome={navHome}/>}
+        {location.pathname === "/"?null:<Nav onSearch={onSearch} navHome={navHom}/>}
       <Routes>
         <Route path='/' element={<Landing/>}/>
-        <Route path='/home' element={<Home onClose={onClose} navHome={navHome}/>}/>
+        <Route path='/home' element={<Home onClose={onClose} navHom={navHom}/>}/>
         <Route path='/home/detail/:id' element={<Detail />}/>
         <Route path='/home/create' element={<Form />}/>
         <Route path='*' element={<NotFound />}/>
