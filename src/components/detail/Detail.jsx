@@ -16,7 +16,7 @@ export default function Detail() {
 
   useEffect(()=>{
     dispatch(addPokemon([]))
-    axios.get(`https://pi-api-ja4i.onrender.com/pokemon/${id}`)
+    axios.get(`https://pi-api-s3xh.onrender.com/pokemon/${id}`)
         .then(({data})=>{
           dispatch(addPokemon(data))
         })
