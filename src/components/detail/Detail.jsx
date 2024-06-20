@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useDispatch,useSelector } from 'react-redux'
-import { addPokemon } from '../../redux/actions/actions'
+import { addPokemon } from '../../redux/features/globalSlice'
 import PokeType from '../pokeType/PokeType'
 import Loading from '../loading/Loading'
 import style from './Detail.module.css'
 import MenuResponsive from '../menuResponsive/MenuResponsive'
+import { useEffect } from 'react'
 
 
 export default function Detail() {
   const {id} = useParams()
-  const {pokemon} = useSelector(s=>s)
+  const {pokemon} = useSelector(s=>s.global)
   const dispatch = useDispatch()
 
   useEffect(()=>{
     dispatch(addPokemon([]))
-    axios.get(`http://localhost:3001/pokemon/${id}`)
+    axios.get(`https://pi-api-s3xh.onrender.com/pokemon/${id}`)
         .then(({data})=>{
           dispatch(addPokemon(data))
         })
@@ -26,7 +26,7 @@ export default function Detail() {
     <div className={style.detail_box}>
       <div className={style.container_detail}>
         {!pokemon.name||!pokemon.img||!pokemon.attack||!pokemon.hp||!pokemon.defense?<Loading />:
-          <>
+          <div className={style.fragment}>
             <img src={pokemon.img} alt={pokemon.name} className={style.image_detail}/>
               <h1>{pokemon.name}</h1>
               <span className={style.id_area}>Id:#{pokemon.id}</span>
@@ -65,7 +65,7 @@ export default function Detail() {
                 <PokeType type={pokemon.type||pokemon.types}/>
               </div>
             </div>
-          </>
+          </div>
         }
       </div>
       <MenuResponsive />

@@ -76,3 +76,52 @@
 .poketype{
   margin-top: 20px;
 }
+
+@media (max-width:950px){
+  *{
+    position: static;
+  }
+  .detail_box{
+    width: 100vw;
+    position: static;
+  }
+  .container_detail h1{
+    font-size: 2.5rem;
+    margin: 40px;
+  }
+  .container_detail{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    position: static;
+    background: linear-gradient(133deg, rgba(84, 31, 51, 0.349) 0%, rgba(80, 40, 106, 0.388) 35%, rgba(28, 41, 71, 0.324) 100%);
+  }
+  .id_area{
+   position: static;
+  }
+  .fragment{
+    margin-top: -100px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    width: 100vw;
+    position: static;
+  }
+  .image_detail{
+    width: 300px;
+    height: 300px;
+    position: static;
+  }
+  .info_area{
+    position: static;
+    margin-top: 20px;
+    width: 80%;
+    height: 25%;
+  }
+}

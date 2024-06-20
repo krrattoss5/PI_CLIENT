@@ -1,4 +1,5 @@
 .container_nav{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -10,11 +11,18 @@
   background-color: #222;
   box-shadow: inset 0px -20px 20px -20px rgba(109,2,203,1);
 }
+.container_nav2{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .button_nav{
   flex-grow: 1;
   flex-basis: 80px;
-  margin-right:50px;
+  margin-right:15px;
   padding:9px;
   border:none;
   border-radius: 5px 5px 5px 5px;
@@ -30,9 +38,19 @@
   box-shadow: -4px -4px 15px 0px rgba(109,2,203,1),
   4px 4px 15px chocolate;
 }
-@media (max-width: 750px) {
+.logo{
+  display: flex;
+  justify-self: start;
+  margin: 0 10px 0 0;
+  width: 150px;
+}
+@media (max-width: 815px) {
   .button_nav{
     display: none;
+  }
+  .container_nav{
+    display: flex;
+    flex-direction: column;
   }
   /* … */
 }

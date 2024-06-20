@@ -17,10 +17,10 @@ function App() {
   //const navigate = useNavigate()
   const location = useLocation()
   const dispatch = useDispatch();
-  const { pokemons } = useSelector(s=>s)
+  const { pokemons,navHome } = useSelector(s=>s)
 
   useEffect(()=>{
-    !pokemons[0] && axios.get('http://localhost:3001/pokemons')
+    !pokemons[0] && axios.get('https://pi-api-s3xh.onrender.com/pokemons')
     .then(({data})=>{
       let filtro1 = new Set(data)
       let filtro2 = Array.from(filtro1)
@@ -34,7 +34,7 @@ function App() {
 
   const onSearch = async (name)=>{
     try {
-      await axios(`http://localhost:3001/pokemon?name=${name}`)
+      await axios(`https://pi-api-s3xh.onrender.com/pokemon?name=${name}`)
         .then(({data})=>{
           dispatch(getPokemonByName(data))
         })
@@ -48,21 +48,20 @@ function App() {
     //window.location.reload();
   }
 
-  function navHome(flag){
+  function navHom(flag){
     dispatch(homeNav(flag))
   }
 
   return (
     <div className="App">
-        <Nav onSearch={onSearch} navHome={navHome}/>
+        {location.pathname === "/"?null:<Nav onSearch={onSearch} navHome={navHom}/>}
       <Routes>
         <Route path='/' element={<Landing/>}/>
-        <Route path='/home' element={<Home onClose={onClose} navHome={navHome}/>}/>
+        <Route path='/home' element={<Home onClose={onClose} navHom={navHom}/>}/>
         <Route path='/home/detail/:id' element={<Detail />}/>
         <Route path='/home/create' element={<Form />}/>
         <Route path='*' element={<NotFound />}/>
       </Routes>
-      <img src={pokeRandom.img[70]} alt='random-img' className='imgM' />
     </div>
   );
 }
