@@ -1,11 +1,10 @@
-import React from 'react'
 import Card from '../card/Card'
 import style from './Cards.module.css'
 import { useSelector } from 'react-redux'
 import Pagination from '../pagination/Pagination';
 
 export default function Cards(props) {
-  const { numPagination,pokemons } = useSelector(s=>s);
+  const { numPagination,pokemons } = useSelector(s=>s.global);
   let fromPage = (numPagination-1)*12;
   let toPage = numPagination *12;
   const current = props.pokemons.slice(fromPage,toPage)

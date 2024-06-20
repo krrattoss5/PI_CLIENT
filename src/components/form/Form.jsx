@@ -1,12 +1,12 @@
-import React,{ useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
-import { createPokemon } from '../../redux/actions/actions.js'
+import { createPokemon } from '../../redux/actions/globalActions'
 import style from './Form.module.css'
 import pokeRandom from '../../assets/pokeRandom';
 
 export default function Form() {
   const dispatch = useDispatch()
-  const {types,pokemonCreated} = useSelector(s=>s)//subscripcion al store
+  const {types,pokemonCreated} = useSelector(s=>s.global)//subscripcion al store
   const [popUp,setPopUp] = useState(''); //global state para comunicarme  on el cliente
   const [errors, setErrors] = useState({});//global state para manejar errores con fn validate
   const [pokemon, setPokemon] = useState({
@@ -195,7 +195,7 @@ export default function Form() {
                 <option type='default'>Select Type 1</option>
                 {
                   types.map(t=>{
-                    return <option>{t.name}</option>
+                    return <option key={t.id + t.name}>{t.name}</option>
                   })
                 }
               </select>}
@@ -208,7 +208,7 @@ export default function Form() {
               :<select name='type' onChange={handleSelect}>
                 <option type='default'>Select Type 2</option>
                 {
-                  types.map((t)=>  t.name !== pokemon.type[0]?<option>{t.name}</option>:null)
+                  types.map((t)=>  t.name !== pokemon.type[0]?<option key={t.name + t.id + t.name}>{t.name}</option>:null)
                 }
               </select>}
             </div>

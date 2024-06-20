@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './PokeTypes.module.css'
 
 export default function PokeType(type) {

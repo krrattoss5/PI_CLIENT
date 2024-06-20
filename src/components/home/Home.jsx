@@ -1,4 +1,3 @@
-import React from 'react'
 import Form from '../form/Form'
 import s from './Home.module.css'
 import Cards from '../cards/Cards'
@@ -8,7 +7,7 @@ import MenuResponsive from '../menuResponsive/MenuResponsive'
 import Footer from '../footer/Footer'
 
 export default function Home({onClose,navHom}) {
-  const { pokemons,homeNav,allPokemons } = useSelector(s=>s)
+  const { pokemons,homeNav,allPokemons } = useSelector(s=>s.global)
   return (
     <div className={s.all}>
       {!allPokemons.length?<div><Loading /><span className={s.span_1}>Aún no hay Pokemons!</span></div>:<>

@@ -1,12 +1,10 @@
-import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { nextP,backP,forceCurrent } from '../../redux/actions/actions'
+import { nextP,backP,forceCurrent } from '../../redux/features/globalSlice'
 import style from './Pagination.module.css'
 
 export default function Pagination() {
   const dispatch = useDispatch()
-  const { numPagination } = useSelector(s=>s)
-  const { pokemons } = useSelector(s=>s)
+  const { numPagination, pokemons } = useSelector(s=>s.global)
   const last = Math.ceil(pokemons.length / 12)
 
   function nexTo (){

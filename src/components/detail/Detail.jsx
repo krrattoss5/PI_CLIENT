@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useDispatch,useSelector } from 'react-redux'
-import { addPokemon } from '../../redux/actions/actions'
+import { addPokemon } from '../../redux/features/globalSlice'
 import PokeType from '../pokeType/PokeType'
 import Loading from '../loading/Loading'
 import style from './Detail.module.css'
 import MenuResponsive from '../menuResponsive/MenuResponsive'
+import { useEffect } from 'react'
 
 
 export default function Detail() {
   const {id} = useParams()
-  const {pokemon} = useSelector(s=>s)
+  const {pokemon} = useSelector(s=>s.global)
   const dispatch = useDispatch()
 
   useEffect(()=>{
     dispatch(addPokemon([]))
-    axios.get(`https://pi-api-ja4i.onrender.com/pokemon/${id}`)
+    axios.get(`https://pi-api-s3xh.onrender.com/pokemon/${id}`)
         .then(({data})=>{
           dispatch(addPokemon(data))
         })

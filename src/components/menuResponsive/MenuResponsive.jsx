@@ -1,14 +1,14 @@
 import style from './MenuResponsive.module.css'
-import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
-import { useDispatch,useSelector } from 'react-redux'
+import { filterBy,filterType,orderPokemons } from '../../redux/features/globalSlice'
+import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { homeNav as hNav } from '../../redux/actions/actions'
+import { isHomeNav } from '../../redux/features/globalSlice'
 
 export default function MenuResponsive({navHom}) {
   const dispatch = useDispatch()
   const [inMenu,setInMenu] = useState(false)
-  const { homeNav } = useSelector(s=>s)
+  // const { homeNav } = useSelector(s=>s.global)
 
 
   function handlerFilterBy(e){
@@ -29,22 +29,22 @@ export default function MenuResponsive({navHom}) {
     setInMenu(false)
   }
 
-  function handleMenu(e){
+  function handleMenu(){
     if(inMenu){
         setInMenu(false)
       }else{
         setInMenu(true)
       }
     }
-    function handleNavHome(e){
-      if(homeNav){
-        dispatch(hNav(false))
-        setInMenu(false)
-      }else{
-        dispatch(hNav(true))
-        setInMenu(false)
-    }
-  }
+  //   function handleNavHome(){
+  //     if(homeNav){
+  //       dispatch(isHomeNav(false))
+  //       setInMenu(false)
+  //     }else{
+  //       dispatch(isHomeNav(true))
+  //       setInMenu(false)
+  //   }
+  // }
 
   return (
     <div>
@@ -55,17 +55,17 @@ export default function MenuResponsive({navHom}) {
         </div>
         {
             !inMenu?null:<div className={style.button_container}>
-            <Link to="/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></Link>
-            <Link to="/home"><button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button></Link>
+            <Link to="/home"><button onClick={()=>dispatch(isHomeNav(false))} className={style.button_nav}>HOME</button></Link>
+            <Link to="/home"><button onClick={()=>dispatch(isHomeNav(true))} className={style.button_nav}>CREATE</button></Link>
             <select className={style.button_nav} onChange={handleOrder} id='order'>
-              <option type='default' disable='true'>ORDER</option>
+              <option type='default' disabled>ORDER</option>
               <option onClick={()=>setInMenu(false)}>Attack ▲</option>
               <option>Attack ▼</option>
               <option>A-Z</option>
               <option>Z-A</option>
             </select>
             <select className={style.button_nav} onChange={handlerFilterType} id='type'>
-              <option type='default' disable='true'>FILTER BY TYPE</option>
+              <option type='default' disabled>FILTER BY TYPE</option>
               <option>bug</option>
               <option>fighting</option>
               <option>flying</option>
@@ -88,7 +88,7 @@ export default function MenuResponsive({navHom}) {
               <option>normal</option>
             </select>
             <select className={style.button_nav} onChange={handlerFilterBy} id='filter'>
-              <option type='default' disable='true'>FILTER</option>
+              <option type='default' disabled>FILTER</option>
               <option>From Db</option>
               <option>From Api</option>
               <option>All</option>

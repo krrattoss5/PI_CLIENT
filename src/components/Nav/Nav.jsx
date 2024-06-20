@@ -1,17 +1,18 @@
-import React from 'react'
 import SearchBar from '../search/SearchBar'
 import style from './Nav.module.css'
-import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
-import { homeNav as hNav } from '../../redux/actions/actions'
+import { filterBy,filterType,orderPokemons } from '../../redux/features/globalSlice'
+import { isHomeNav } from '../../redux/features/globalSlice'
 import { useDispatch,useSelector } from 'react-redux'
 import pokeRandom from '../../assets/pokeRandom'
+import { Link } from 'react-router-dom'
 
-export default function Nav({onSearch,navHom}) {
+export default function Nav({onSearch}) {
   const dispatch = useDispatch()
-  const { homeNav } = useSelector(s=>s)
+  const { homeNav } = useSelector(s=>s.global)
 
   function handlerFilterBy(e){
     e.preventDefault()
+    console.log(e.target.value)
     dispatch(filterBy(e.target.value))
   }
 
@@ -27,17 +28,17 @@ export default function Nav({onSearch,navHom}) {
 
   return (
     <div className={style.container_nav}>
-      <a href="/#/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo}  onClick={()=>dispatch(hNav(false))}/></a>
+      <Link to="/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo}  onClick={()=>dispatch(isHomeNav(false))}/></Link>
       <div className={style.container_nav2}>
       {!homeNav?<select className={style.button_nav} onChange={handleOrder} id='order'>
-        <option type='default' disable='true'>ORDER</option>
+        <option type='default' disabled>ORDER</option>
         <option>Attack ▲</option>
         <option>Attack ▼</option>
         <option>A-Z</option>
         <option>Z-A</option>
       </select>:null}
       {!homeNav?<select className={style.button_nav} onChange={handlerFilterType} id='type'>
-        <option type='default' disable='true'>FILTER BY TYPE</option>
+        <option type='default' disabled>FILTER BY TYPE</option>
         <option>bug</option>
         <option>fighting</option>
         <option>flying</option>
@@ -60,13 +61,13 @@ export default function Nav({onSearch,navHom}) {
         <option>normal</option>
       </select>:null}
       {!homeNav?<select className={style.button_nav} onChange={handlerFilterBy} id='filter'>
-        <option type='default' disable='true'>FILTER</option>
+        <option type='default' disabled>FILTER</option>
         <option>From Db</option>
         <option>From Api</option>
         <option>All</option>
       </select>:null}
-      {!homeNav?<button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button>:null}
-      <a href="/#/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></a>
+      {!homeNav?<button onClick={()=>dispatch(isHomeNav(true))} className={style.button_nav}>CREATE</button>:null}
+      <Link to="/home"><button onClick={()=>dispatch(isHomeNav(false))} className={style.button_nav}>HOME</button></Link>
       {!homeNav?<SearchBar onSearch={onSearch}/>:null}
     </div>
     </div>
