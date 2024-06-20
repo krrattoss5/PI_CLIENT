@@ -3,7 +3,11 @@ import { filterBy,filterType,orderPokemons } from '../../redux/features/globalSl
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { isHomeNav } from '../../redux/features/globalSlice'
+=======
+import { homeNav as hNav } from '../../redux/actions/actions'
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
 
 export default function MenuResponsive({navHom}) {
   const dispatch = useDispatch()
@@ -36,6 +40,7 @@ export default function MenuResponsive({navHom}) {
         setInMenu(true)
       }
     }
+<<<<<<< HEAD
   //   function handleNavHome(){
   //     if(homeNav){
   //       dispatch(isHomeNav(false))
@@ -45,6 +50,17 @@ export default function MenuResponsive({navHom}) {
   //       setInMenu(false)
   //   }
   // }
+=======
+    function handleNavHome(e){
+      if(homeNav){
+        dispatch(hNav(false))
+        setInMenu(false)
+      }else{
+        dispatch(hNav(true))
+        setInMenu(false)
+    }
+  }
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
 
   return (
     <div>
@@ -55,8 +71,13 @@ export default function MenuResponsive({navHom}) {
         </div>
         {
             !inMenu?null:<div className={style.button_container}>
+<<<<<<< HEAD
             <Link to="/home"><button onClick={()=>dispatch(isHomeNav(false))} className={style.button_nav}>HOME</button></Link>
             <Link to="/home"><button onClick={()=>dispatch(isHomeNav(true))} className={style.button_nav}>CREATE</button></Link>
+=======
+            <Link to="/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></Link>
+            <Link to="/home"><button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button></Link>
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
             <select className={style.button_nav} onChange={handleOrder} id='order'>
               <option type='default' disabled>ORDER</option>
               <option onClick={()=>setInMenu(false)}>Attack ▲</option>

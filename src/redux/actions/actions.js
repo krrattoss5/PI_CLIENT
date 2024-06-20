@@ -107,4 +107,7 @@ export const forceCurrent = (num)=>{
     payload:num
   }
 };
+<<<<<<< HEAD
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
+=======
 >>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f

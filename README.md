@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -14,6 +15,16 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 =======
+=======
+# Deploy del Cliente:
+<a href="http://pokedex.downn.store/">POKEDEX.DOWNN.STORE</a>
+# Pokemon App
+
+- Esta app fue realizada para la etapa "Proyecto Individual" de Labs del bootcamp Henry.
+- Tiempo de desarrollo: 2 semanas.
+- No estaba permitdo usar librerías ni frameworks CSS (Boostrap, MaterialUI, etc) por lo cual todos los modales, funcionalidad de botones y estilos se realizaron utilizando HTML CSS Y JS puro.
+
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
 > Realizado utilizando el stack de tecnologías HTML, CSS, Javascript, React, Redux, Node.JS, Express, Sequelize y PostgreSQL.
 
 ## Landing
@@ -64,4 +75,7 @@ Currently, two official plugins are available:
 - El boton de `CREATE` sólo se habilita si todos los campos estan aprobados.
 - Al confirmar se realiza la operación en el servidor y nos muestra en pantalla la respuesta que nos envía el mismo (éxito o error).
 - Luego al cabo de unos segundos automáticamente nos devuelve al Home.
+<<<<<<< HEAD
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
+=======
 >>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f

@@ -1,5 +1,6 @@
 import SearchBar from '../search/SearchBar'
 import style from './Nav.module.css'
+<<<<<<< HEAD
 import { filterBy,filterType,orderPokemons } from '../../redux/features/globalSlice'
 import { isHomeNav } from '../../redux/features/globalSlice'
 import { useDispatch,useSelector } from 'react-redux'
@@ -7,6 +8,14 @@ import pokeRandom from '../../assets/pokeRandom'
 import { Link } from 'react-router-dom'
 
 export default function Nav({onSearch}) {
+=======
+import { filterBy,filterType,orderPokemons } from '../../redux/actions/actions'
+import { homeNav as hNav } from '../../redux/actions/actions'
+import { useDispatch,useSelector } from 'react-redux'
+import pokeRandom from '../../assets/pokeRandom'
+
+export default function Nav({onSearch,navHom}) {
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
   const dispatch = useDispatch()
   const { homeNav } = useSelector(s=>s.global)
 
@@ -28,7 +37,11 @@ export default function Nav({onSearch}) {
 
   return (
     <div className={style.container_nav}>
+<<<<<<< HEAD
       <Link to="/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo}  onClick={()=>dispatch(isHomeNav(false))}/></Link>
+=======
+      <a href="/#/home"><img src={pokeRandom.img[74]} alt='random-img' className={style.logo}  onClick={()=>dispatch(hNav(false))}/></a>
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
       <div className={style.container_nav2}>
       {!homeNav?<select className={style.button_nav} onChange={handleOrder} id='order'>
         <option type='default' disabled>ORDER</option>
@@ -66,8 +79,13 @@ export default function Nav({onSearch}) {
         <option>From Api</option>
         <option>All</option>
       </select>:null}
+<<<<<<< HEAD
       {!homeNav?<button onClick={()=>dispatch(isHomeNav(true))} className={style.button_nav}>CREATE</button>:null}
       <Link to="/home"><button onClick={()=>dispatch(isHomeNav(false))} className={style.button_nav}>HOME</button></Link>
+=======
+      {!homeNav?<button onClick={()=>dispatch(hNav(true))} className={style.button_nav}>CREATE</button>:null}
+      <a href="/#/home"><button onClick={()=>dispatch(hNav(false))} className={style.button_nav}>HOME</button></a>
+>>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
       {!homeNav?<SearchBar onSearch={onSearch}/>:null}
     </div>
     </div>
