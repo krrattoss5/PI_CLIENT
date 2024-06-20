@@ -7,11 +7,7 @@ import MenuResponsive from '../menuResponsive/MenuResponsive'
 import Footer from '../footer/Footer'
 
 export default function Home({onClose,navHom}) {
-<<<<<<< HEAD
   const { pokemons,homeNav,allPokemons } = useSelector(s=>s.global)
-=======
-  const { pokemons,homeNav,allPokemons } = useSelector(s=>s)
->>>>>>> f57d034bca69e3bd1c23cdeab4764a1d99b04e0f
   return (
     <div className={s.all}>
       {!allPokemons.length?<div><Loading /><span className={s.span_1}>Aún no hay Pokemons!</span></div>:<>
