@@ -1,0 +1,180 @@
+.button_bug{
+  background-color: #729f3f;
+  border:none;
+  box-shadow: 1px 1px 10px #729f3f;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_fighting{
+  background-color: #d56723;
+  border:none;
+  box-shadow: 1px 1px 10px #d56723;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_flying{
+  background-color: #3dc7ef;
+  border:none;
+  box-shadow: 1px 1px 10px #3dc7ef;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_poison{
+  background-color: #b97fc9;
+  border-radius:5px;
+  box-shadow: 1px 1px 10px #b97fc9;
+  border:none;
+  color:white;
+  padding:5px 10px;
+  margin: 0 20px 0 0;
+}
+.button_ground{
+  background-color: #ab9842;
+  border:none;
+  box-shadow: 1px 1px 10px #ab9842;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_rock{
+  background-color: #a38c21;
+  border:none;
+  box-shadow: 1px 1px 10px #a38c21;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_ghost{
+  background-color: #7b62a3;
+  border:none;
+  box-shadow: 1px 1px 10px #7b62a3;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_steel{
+  background-color: #9eb7b8;
+  border:none;
+  box-shadow: 1px 1px 10px #9eb7b8;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_fire{
+  background-color: #fd7d24;
+  border:none;
+  box-shadow: 1px 1px 10px #fd7d24;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_water{
+  background-color: #4592c4;
+  border:none;
+  box-shadow: 1px 1px 10px #4592c4;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_grass{
+  background-color: #9bcc50;
+  border:none;
+  box-shadow: 1px 1px 10px #9bcc50;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_electric{
+  background-color: #eed535;
+  border:none;
+  box-shadow: 1px 1px 10px #eed535;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_psychic{
+  background-color: #f366b9;
+  border:none;
+  box-shadow: 1px 1px 10px #f366b9;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_ice{
+  background-color: #51c3e6;
+  border:none;
+  box-shadow: 1px 1px 10px #51c3e6;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_dragon{
+  background-color: #f16e57;
+  border:none;
+  box-shadow: 1px 1px 10px #f16e57;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_dark{
+  background-color: #707070;
+  border:none;
+  box-shadow: 1px 1px 10px #707070;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_fairy{
+  background-color: rgb(209, 202, 11);
+  border:none;
+  box-shadow: 1px 1px 1px rgb(209, 202, 11);
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_unknown{
+  background-color: #313131;
+  border:none;
+  box-shadow: 1px 1px 10px #313131;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_shadow{
+  background-color: #904246;
+  border:none;
+  box-shadow: 1px 1px 10px #904246;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}
+.button_normal{
+  background-color: #a4acaf;
+  border:none;
+  box-shadow: 1px 1px 10px #a4acaf;
+  margin: 0 20px 0 0;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+}

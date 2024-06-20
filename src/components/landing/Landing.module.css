@@ -1,0 +1,184 @@
+/* *{
+  border:solid 1px white;
+}*/
+
+.container{
+  margin:0;
+  padding:0;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  background-image: url('../../assets/randomlanding/landingBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+}
+
+.container_inside{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height:15%;
+  position: relative;
+  background: rgba(84, 31, 51, 0.477);
+  background: linear-gradient(133deg, rgba(84, 31, 51, 0.486) 0%, rgba(80, 40, 106, 0.412) 35%, rgba(28, 41, 71, 0.458) 100%);
+  padding-left:35%;
+  padding-right:35%;
+  padding-top:15%;
+  padding-bottom:20%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 31px 2px rgba(255,156,255,1);
+  -moz-box-shadow: 0px 0px 31px 2px rgba(255,156,255,1);
+  box-shadow: 0px 0px 31px 2px rgba(255,156,255,1);
+}
+.container_inside_2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  right: 10%;
+  top:25%;
+  width: 30%;
+  height: 55%;
+}
+.menu{
+  display: flex;
+  position: absolute;
+  top:0;
+  right:0;
+  padding:3% 5% 10px 80%;
+}
+
+
+.button_home{
+  height:40px;
+  width:80px;
+  margin-right: 10px;
+  background: rgb(243,66,103);
+  background: linear-gradient(52deg, rgba(243,66,103,1) 0%, rgba(80,40,106,1) 84%, rgba(28,41,71,1) 98%);
+  border:none;
+  color:white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  -webkit-box-shadow: -12px 26px 31px -21px rgba(247,255,0,1);
+  -moz-box-shadow: -12px 26px 31px -21px rgba(247,255,0,1);
+  box-shadow: -12px 26px 31px -21px rgba(247,255,0,1);
+}
+.button_home:hover{
+  width:85px;
+  height:45px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 10px rgb(161, 12, 60);
+}
+.border_bottom {
+  max-width: 250px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  background: linear-gradient(to right, #d0d002, #8f027a);
+  padding: 1px 35%;
+}
+.text_area{
+  background-color: rgba(28,41,71,0.2);
+  padding-bottom: 15px;
+  border-radius: 20px;
+  position: absolute;
+  left:10%;
+  top:20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width:45%;
+  -webkit-box-shadow: 10px 10px 76px -7px rgba(201,47,201,1);
+  -moz-box-shadow: 10px 10px 76px -7px rgba(201,47,201,1);
+  box-shadow: 10px 10px 76px -7px rgba(201,47,201,1);
+}
+.text_span{
+  line-height: normal;
+  background:#ccc;
+  background:linear-gradient(90deg,#d0d002,#8f027a);
+  font-family:system-ui;
+  font-weight: bold;
+  font-size:2rem;
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+  margin-bottom: 1rem;
+}
+.text{
+  text-align:center;
+  line-height: normal;
+  margin-bottom: 0;
+  color:white;
+  font-size:2rem;
+  float: right;
+}
+.imgR{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.shadow{
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255,156,255,0.2);;
+  width:200px;
+  height:15px;
+  -webkit-box-shadow: 0px 0px 120px 25px rgb(252, 110, 252);
+-moz-box-shadow: 0px 0px 120px 25px rgb(252, 96, 252);
+box-shadow: 0px 0px 120px 25px rgba(251, 67, 251, 0.689);
+  border-radius: 50%;
+}
+@media (max-width:950px){
+  *{
+    position: static;
+  }
+  .container{
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_inside{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: static;
+    background-color: rgba(0, 0, 0, 0.768);
+  }
+  .container_inside_2{
+    width: 300px;
+    height: 300px;
+    position: static;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+  .imgR{
+    width: 300px;
+    height: 300px;
+  }
+  .text_area{
+    position: static;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 0 0;
+  }
+  .menu{
+    display: none;
+  }
+  .button_home{
+    width: 350px;
+    border-radius: 20px;
+  }
+  .Link{
+    max-width: 850px;
+  }
+}
