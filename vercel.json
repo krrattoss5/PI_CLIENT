@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "surce": "/(.*)",
+      "redirection": "/"
+    }
+  ]
+}
